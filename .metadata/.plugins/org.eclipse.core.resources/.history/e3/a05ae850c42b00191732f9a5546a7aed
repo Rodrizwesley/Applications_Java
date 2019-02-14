@@ -1,0 +1,30 @@
+package entities;
+
+public class Student {
+
+	public String name;
+	public double note1;
+	public double note2;
+	public double note3;
+	
+	public double media() {
+		double media = note1 + note2 + note3;
+		return media;
+	}
+	
+	public void result() {
+		double notaf = media();
+		
+		if (notaf >= 60) {
+			System.out.printf("FINAL GRADE: %.2f", notaf);
+			System.out.println("PASS");
+			}
+		else {
+			double missing = 60 - notaf;
+			System.out.printf("FINAL GRADE: %.2f", notaf);
+			System.out.println("FAILED");
+			System.out.printf("MISSING %d.2f POINTS", missing);
+		}
+		
+	}
+}

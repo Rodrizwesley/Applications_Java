@@ -1,0 +1,28 @@
+package application;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+import entities.Rented;
+
+public class Program {
+
+	public static void main(String[] args) {
+
+		Locale.setDefault(Locale.US);
+		Scanner sc = new Scanner(System.in);
+		
+		Rented[] vect = new Rented[10];
+		
+		System.out.print("How many rooms will be rented? ");
+		int willBeRent = sc.nextInt();
+		
+		for(int i = 1; i < willBeRent; i++) {
+			System.out.printf("Rent #%d", i);
+			
+		}
+		
+		sc.close();
+	}
+
+}
